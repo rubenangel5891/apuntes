@@ -1,0 +1,43 @@
+APUNTES DE VUE 3
+
+//Crear una nueva aplicación Vue mediante npm (recomendado)
+npm init vue@latest
+
+//crear una nueva aplicación desde VITE
+
+// npm 6.x
+npm create vite@latest my-vue-app --template vue
+
+// npm 7+, extra double-dash is needed:
+npm create vite@latest my-vue-app -- --template vue
+
+
+//Restaurar un proyecto Vue existente para comenzar a desarrollar en local
+
+npm install
+//Mira en el package.json en la sección "scripts" para ver qué scripts de npm se supone que tienes que ejecutar,
+
+ 
+//Instalamos vue cli si no lo tenemos 
+install -g @vue/cli
+
+ 
+
+//VUE CLI
+vue --version
+
+
+//Crear una aplicación con CLI
+vue create nombre_proyecto
+
+
+// VUEX	
+
+// Los Getters solo sirven para hacer cálculos con los states no sirven para modificar el state
+
+// los states solo pueden ser cambiadas por las mutaciones.
+
+
+//Exponer mi aplicación en la LAN
+
+npm run dev -- --host

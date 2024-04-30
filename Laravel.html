@@ -1,0 +1,117 @@
+Laravel
+
+
+INSTALAR el instalador de LARAVEL via COMPOSER
+
+composer global remove laravel/installar
+
+composer global require laravel/installer
+
+laravel new nombre-proyecto   //siempre instalará la última versión de laravel
+
+composer create-project laravel/laravel curso-laravel-styde "9.*"
+
+
+
+CONTROLADORES / CONTROLLER
+Para mantener limpio el archivo de rutas es recomendable utilizar controladores
+
+Siempre que se necesite realizar una acción entre la PETICIÓN y la RESPUESTA es preferible utilizar un controlador
+
+
+
+MIGRACIONES / MIGRATIONS
+
+
+
+php artisan migrate //Ejecutar migraciones 
+
+php artisan migrate:rollback //Deshace la ultima migración 
+
+php artisan migrate:fresh //Elimina las tablas y vuelve a generar las migraciones
+
+php artisan make:migration create_posts_table   //crear un nuevo archivo de migración con el nombre posts
+
+
+https://laravel.com/docs/9.x/migrations#available-column-types //tipos de columnas 
+
+php artisan make:migration add_body_to_posts_table //modificar las comunas de una tabla que tiene datos
+
+
+
+
+ORM / LARAVEL ELOQUENT
+
+Para crear un modelo desde la console se debe seguir la comvención PascalCase (ExampleModelName) en singular
+
+php artisan make:model Post
+
+php artisan make:model Post -m	//CREAR UNA MIGRACIÓN CON SU MODELO
+
+
+TIMKER (Interactua con la aplicación)
+
+//Ejecutamos consultas a los modelos
+
+ Post::get()
+
+ Post::find(1)
+
+ //guardamos en una variable
+ 
+ $variable = Post::find(1)
+
+//Accedemos a los atributos 
+
+$variable->title
+
+//Modificamos el atributo
+
+$variable->title = "Modified title";
+
+//Guardamos las modificaciones
+
+$variable->save();
+
+
+//Crear un nuevo registro
+
+$var = new Post;
+$var->title = 'Fourth Post';
+$var->body = 'Fourth Post Body'
+$var->save()
+
+//Eliminar un registro de la BD
+$var->delete()
+
+
+
+//Reglas de validación 
+
+https://laravel.com/docs/10.x/validation
+
+// Traducción de las mensajes de error 
+
+https://github.com/laravel-lang/lang
+
+
+//Crear un Request
+
+php artisan make:request SavePostRequest
+
+
+//Instalar las dependencias NPM (npm manejador de paquetes de JavaScript)
+
+npm install
+
+
+//Crear un controlador y agruparlos
+
+php artisan make:controller Auth/RegisteredUserController
+
+php artisan make:controller Auth/AuthenticatedSessionController
+
+
+
+//Generar una nueva APP_KEY
+php artisan key:generate

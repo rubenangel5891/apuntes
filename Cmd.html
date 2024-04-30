@@ -1,0 +1,76 @@
+//CMD
+// Listar los usuarios de la red
+>net user
+
+// Agregar un usuario
+
+>net user nombre * /add
+
+// Ver la configuración del Usuario
+
+>net user nombre
+
+//Quitar el usuario del grupo local de usuarios
+
+>net localgroup usuarios nombre /delete
+
+//crear carpeta
+
+>md d:\ruta\nombre
+
+//listar archivos y directorios
+
+>dir d:\ruta\
+
+//Borrar una carpeta vacia
+
+>rd d:\ruta\nombre
+
+//Cambiar nombre de una carpeta
+
+>ren d:\nombre nuevoNombre
+
+//Limpiar cambiar nombre
+
+>cls
+
+//LISTAR LOS RECUROS COMPARTIDOS EN LA RED
+
+>net share
+
+//Eliminar recurso compartido
+
+>net share NombreRecurso /delete
+
+//Compartir una carpeta a un usuario específico
+
+>net share NombreRed=D:\Ruta\carpeta /grant:NombreUsuario,full /users:1
+
+//Agregar permisos de seguridad al usuario 
+
+>cacls d:\nombre /e /t /p NombreUsuario:f
+
+//listar ya ayuda de algún comando 
+
+>comando /?
+
+
+//Mostar las interfaces de red 
+
+>netsh interface show interface
+
+//Establecer la configuración de un adaptador 
+
+>netsh interface set interface "nombre de la interface" disable
+
+
+
+
+
+
+
+
+
+
+
+

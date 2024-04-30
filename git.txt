@@ -1,0 +1,279 @@
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+					APUNTES DE GIT 
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Inicializar git  (working directory)
+
+git init
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Agregar archivos al área temporal (staging area)
+
+git add nombre_archivo
+
+git add .
+
+git add -A
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Ver el estado 
+
+git status -s
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Pasar al repositorio local (local repositorio)
+
+git commit -m "Mensaje del commit"
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Ver los commit realizados
+
+git log --oneline
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Regresar a un punto de restauración 
+
+git reset --hard "sha"
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Vincular un repositorio Virtual de GitHub
+
+git remote add origin https://github.com/rubenangel5891/.......
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Subir el repositorio local al repositorio virtual
+
+git push -u origin master
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Sincronizar repositorio virtual con repositorio local
+
+git pull
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Añadir tags 
+
+git tag version1.0 -m "comentario"
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Subir el tag al repositorio
+
+git push --tags
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Crear ramas paralelas 
+
+git branch ramaAlternativa
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# Cambiar de rama
+
+git checkout ramaAlternativa
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Ver la rama en la que estamos
+
+git branch
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Fusionar dos ramas 
+
+git merge ramaAlternativa
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Borrar una rama 
+
+git branch -d ramaAlternativa
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Ver la url del servidor remoto
+
+git remote -v
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Ignorar archivo
+
+Crear un archivo .gitignore y listar los archivos o carpetas0 ignorado
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Renombrar la rama por defecto
+
+git branch -m master main
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Configurar la rama global por defecto
+
+git config --global init.defaultBranch main
+
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Moverse entre los commit con Reset
+
+git reset "id"
+git reset --hard "id"
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#ver el historial de commit
+
+git reflog
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Eliminar commit "Mejor q reset" 
+
+git revert "id" -m "mensaje" 
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#ver las ramas 
+
+git log --oneline --graph
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# Eliminar una rama
+
+git branch -d nombreRama
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#ver la configuración 
+
+git config --list
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Eliminar una rama remota
+
+git push origin --delete nombre_de_la_rama
+
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Comandos sugeridos al crear un repositorio remoto en github
+
+echo "# index" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:rubenangel5891/index.git
+git push -u origin main
+
+
+git remote add origin git@github.com:rubenangel5891/index.git
+git branch -M main
+git push -u origin main
+
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#Clonar archivos de github en cpanel
+
+git clone git@example.com:MyStuff/private-repository.git
+
+
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# Test conexión de cpanel y github
+
+ssh -T git@github.com
+
+
+
+
+
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+				
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#
+
+ruben@DESKTOP-LMTC1H8 MINGW64 ~
+$ git config --global init.defaultBranch main
+
+ruben@DESKTOP-LMTC1H8 MINGW64 ~
+$ cd Desarrollo/web02-infocal.ru/dist/
+
+ruben@DESKTOP-LMTC1H8 MINGW64 ~/Desarrollo/web02-infocal.ru/dist
+$ git init
+Initialized empty Git repository in C:/Users/ruben/Desarrollo/web02-infocal.ru/dist/.git/
+
+ruben@DESKTOP-LMTC1H8 MINGW64 ~/Desarrollo/web02-infocal.ru/dist (main)
+$ git init --separate-git-dir ../../git/
+Reinitialized existing Git repository in C:/Users/ruben/Desarrollo/git/
+
+ruben@DESKTOP-LMTC1H8 MINGW64 ~/Desarrollo/web02-infocal.ru/dist (main)
+$ git add .
+warning: LF will be replaced by CRLF in css/chunk-vendors.8bda0bd5.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in js/chunk-vendors.595e705c.js.
+The file will have its original line endings in your working directory
+
+ruben@DESKTOP-LMTC1H8 MINGW64 ~/Desarrollo/web02-infocal.ru/dist (main)
+$ git commit -m "Version 1.1"
+[main (root-commit) 096ed0d] Version 1.1
+ 55 files changed, 107 insertions(+)
+.........
+........
+ruben@DESKTOP-LMTC1H8 MINGW64 ~/Desarrollo/web02-infocal.ru/dist (main)
+$ git remote add origin https://github.com/rubenangel5891/index.git
+
+ruben@DESKTOP-LMTC1H8 MINGW64 ~/Desarrollo/web02-infocal.ru/dist (main)
+$ git push -u origin main
+Enumerating objects: 61, done.
+Counting objects: 100% (61/61), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (60/60), done.
+Writing objects: 100% (61/61), 42.35 MiB | 1.86 MiB/s, done.
+Total 61 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), done.
+To https://github.com/rubenangel5891/index.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+ruben@DESKTOP-LMTC1H8 MINGW64 ~/Desarrollo/web02-infocal.ru/dist (main)
+$ git init
+
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#
+
+
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#
+
+
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#
+
+
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+
+
+
+
+
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+				ACTUALIZAR LA PÁGINA 
+§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#
+
+
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#
+
+
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#
+
+
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#
+
+
+
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
